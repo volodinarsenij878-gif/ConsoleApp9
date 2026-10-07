@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите стоимость товара: ");
+            decimal price = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Введите процент скидки (0–100): ");
+            decimal discountPercent = decimal.Parse(Console.ReadLine());
+
+            decimal discountAmount = price * discountPercent / 100m;
+            decimal finalPrice = price - discountAmount;
+
+            Console.WriteLine($"Сумма скидки: {discountAmount}");
+            Console.WriteLine($"Итоговая цена: {finalPrice}");
+        }
+        }
